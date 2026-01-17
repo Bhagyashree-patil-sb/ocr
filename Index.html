@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Face Attendance System - Sharnbasava University</title>
+  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loadingOverlay">
+  <div class="loader">Loading Models...</div>
+</div>
+
+<header>
+  <img src="src/logo.png" alt="College Logo" class="logo">
+  <h1>Sharnbasava University</h1>
+  <h2>Face Attendance System</h2>
+</header>
+
+<div class="main-container">
+
+  <div class="video-container">
+    <video id="video" autoplay muted playsinline></video>
+  </div>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>USN</th>
+          <th>Date</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody id="attendance"></tbody>
+    </table>
+
+    <div class="buttons">
+      <button id="export">Export Attendance CSV</button>
+      <button id="reset">Reset Attendance</button>
+      <button id="toggleCam">Turn Camera Off</button>
+    </div>
+
+    <div class="add-member">
+      <h3>Add New Member</h3>
+      <input type="text" id="newName" placeholder="Name">
+      <input type="text" id="newUSN" placeholder="USN">
+      <input type="file" id="newImages" accept="image/*" multiple>
+      <button id="addMember">Add Member</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
